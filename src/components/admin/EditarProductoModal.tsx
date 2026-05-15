@@ -99,7 +99,7 @@ export function EditarProductoModal({
       setDescripcion(prod.descripcion || "");
       setImagenUrl(prod.imagen_url || "");
       if (prod.imagenes) {
-        setImages(prod.imagenes.map(url => ({ url })));
+        setImages(prod.imagenes.map((url: string) => ({ url })));
       } else if (prod.imagen_url) {
         setImages([{ url: prod.imagen_url }]);
       }
