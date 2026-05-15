@@ -88,9 +88,7 @@ export function EditarProductoModal({
     if (!open || !productoId) return;
     setStep(1);
     setDone(false);
-    setImageFiles([]);
-    previewUrls.forEach(url => URL.revokeObjectURL(url));
-    setPreviewUrls([]);
+    setImages([]);
     setIsUploading(false);
 
     getProductoByIdAdmin(productoId).then(prod => {
