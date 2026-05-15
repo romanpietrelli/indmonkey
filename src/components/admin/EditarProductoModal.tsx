@@ -796,10 +796,10 @@ export function EditarProductoModal({
                             {categorias.find((c) => c.id === categoriaId)?.nombre}
                           </p>
                         )}
-                        {previewUrls.length > 0 && (
+                        {images.length > 0 && (
                           <div className="p-2 mb-3 flex gap-2 overflow-x-auto scroolbar-hide" style={{ border: "1px solid hsl(0 0% 14%)", overflowX: 'auto', scrollbarWidth: 'none' }}>
-                            {previewUrls.map((url, idx) => (
-                               <img key={idx} src={url} alt={`Preview ${idx}`} className="h-24 w-24 object-cover shrink-0 rounded-sm" />
+                            {images.map((img, idx) => (
+                               <img key={idx} src={img.url} alt={`Preview ${idx}`} className="h-24 w-24 object-cover shrink-0 rounded-sm" />
                             ))}
                           </div>
                         )}
